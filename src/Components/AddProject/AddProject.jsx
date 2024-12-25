@@ -72,7 +72,7 @@ function AddProject() {
       }
 
       const response = await axios.post(
-        'https://oscowl-backend-xohl.onrender.com/project', 
+        'https://robotspace-backend.onrender.com/project', 
         project, 
         {
           headers: {

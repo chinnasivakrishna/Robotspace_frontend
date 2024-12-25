@@ -28,7 +28,7 @@ const GraphPage = () => {
           return;
         }
 
-        const response = await axios.get('https://oscowl-backend-xohl.onrender.com/projects', {
+        const response = await axios.get('https://robotspace-backend.onrender.com/projects', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

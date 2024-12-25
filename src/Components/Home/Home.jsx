@@ -24,7 +24,7 @@ const HomePage = () => {
           return;
         }
 
-        const response = await axios.get('https://oscowl-backend-xohl.onrender.com/projects', {
+        const response = await axios.get('https://robotspace-backend.onrender.com/projects', {
           headers: {
             Authorization: `Bearer ${token}`, // Include JWT token in Authorization header
           },
@@ -48,7 +48,7 @@ const HomePage = () => {
 
     try {
       const response = await axios.put(
-        `https://oscowl-backend-xohl.onrender.com/project/${projectId}/status`,
+        `https://robotspace-backend.onrender.com/project/${projectId}/status`,
         { status, githubLink },
         {
           headers: {
@@ -82,7 +82,7 @@ const HomePage = () => {
     try {
       const token = Cookies.get('jwt_token');
       const response = await axios.put(
-        `https://oscowl-backend-xohl.onrender.com/project/${selectedProjectId}/completed`,
+        `https://robotspace-backend.onrender.com/project/${selectedProjectId}/completed`,
         { githubLink },
         {
           headers: {
@@ -118,7 +118,7 @@ const HomePage = () => {
 
     try {
       // Make DELETE request to backend API
-      await axios.delete(`https://oscowl-backend-xohl.onrender.com/project/${projectId}`, {
+      await axios.delete(`https://robotspace-backend.onrender.com/project/${projectId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
